@@ -3,7 +3,7 @@
 
 
 ## ⌨️ Usage
-```
+```bash
 python fetch_prices.py --instance-type <INSTANCETYPE>
 ```
 <img width=600px src=https://user-images.githubusercontent.com/58488209/147371984-ee4f528b-290c-4925-a9ce-816576fe559e.gif>
@@ -16,7 +16,23 @@ python fetch_prices.py --instance-type <INSTANCETYPE>
 make install
 ```
 
-### 2. Run the application
+### 2. Configure boto3 credentials
+Use the AWS CLI
+```bash
+aws configure
+```
+
+... or ...
+
+Create credentials file manually
+```bash
+# ~/.aws/credentials
+[default]
+aws_access_key_id = XXXXXX
+aws_secret_access_key = XXXXXXXXXXXX
+```
+
+### 3. Run the application
 ```bash
 python fetch_prices.py --instance-type <INSTANCETYPE>
 
